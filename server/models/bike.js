@@ -16,6 +16,11 @@ const bikeSchema = new mongoose.Schema({
         min: 0,
         required: true
     },
+    rentTime: {
+        type: Number,
+        min: 0,
+        default: 0,
+    },
     rented: {
         type: Boolean,
         default: false
@@ -23,6 +28,16 @@ const bikeSchema = new mongoose.Schema({
 }, {
     toObject: { getters: true, virtuals: true },
     toJSON: { getters: true, virtuals: true }
+});
+
+bikeSchema.post('find', async function(docs) {
+    if (docs.length) {
+        for (const bike of docs) {
+            if (bike.rented && bike.rentTime >= 20) {
+                bike.rentPrice = (bike.rentPrice / 2).toFixed(2);
+            }
+        }
+    }
 });
 
 const Bike = mongoose.model('Bike', bikeSchema);

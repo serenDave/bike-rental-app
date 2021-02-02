@@ -1,13 +1,64 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f5f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    font-size: 35;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.App {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 10px; 
+}
+
+.create-rent {
+    background-color: #e9eaee;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    background-color: #21c09d;
+}
+
+.rent-item {
+    background-color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.rent-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-btn {
+    margin-right: 10px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.rent-time-control {
+    width: 130px;
+    margin-right: 10px;
 }

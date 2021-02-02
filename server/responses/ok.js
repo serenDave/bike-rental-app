@@ -1,7 +1,7 @@
 module.exports = (sendData, message) => {
     const responseObject = {
         status: 'success',
-        data: { sendData }
+        data: sendData
     };
     
     if (message) {
